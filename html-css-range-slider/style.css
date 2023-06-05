@@ -24,7 +24,6 @@ body {
     border-radius: 3px;
 }
 
-
 #slider::-webkit-slider-thumb{
     -webkit-appearance: none;
     width: 48px;
@@ -40,48 +39,69 @@ body {
     position: absolute;
     bottom: -20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 }
 
 .SelectBtn {
-    height: 48px;
-    width: 48px;
-    background-color:yellow;
-    background-size:cover;
+    height: 38px;
+    width: 38px;
+    background-color: white;
+    background-size: cover;
     background-position: center;
-    border-radius:50%;
+    border-radius: 50%;
     position: absolute;
-    bottom: 0;
+    bottom: -5;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#SelectValue {
-    width: 48px;
-    height: 40px;
+.SelectBtn:before {
+    content: '';
+    height: 50%;
+    width: 50%;
+    background-color: yellow;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
+    top: 25%;
+    left: 25%;
+}
+#SelectValue {
+    width: 38px;
+    height: 30px;
+    position: absolute;
+    top: 20;
     background:#ffd200;
     border-radius: center;
     text-align: center;
-    line-height: 45px;
-    font-size: 20px;
+    line-height: 35px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 #SelectValue::after {
     content: '';
     border-top: 17px solid #ffd200;
-    border-left: 24px solid #000;
-    border-right: 24px solid #000;
+    border-left: 19px solid #000;
+    border-right: 19px solid #000;
     position: absolute;
-    bottom: -14px;
+    bottom: -15px;
     left: 0;
-
 }
+
 #ProgressBar {
     width: 50%;
     height: 7px;
-    background-color: ;
+    background-color:#ffd200 ;
+    border-radius:3px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .range-label {
