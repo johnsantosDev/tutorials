@@ -6,22 +6,24 @@
 
     <body>
         <div class="main">
-            <input type="range" min="0" max="10" value="5" id="slider">
+            <input type="range" min="0" max="100" value="50" id="slider">
             <div id="selector">
                 <div class="SelectBtn"></div>
                 <div id="SelectValue"></div>
             </div>
             <div id="ProgressBar"></div>
+            <div class="range-label">0</div>
+            <div class="range-label">10</div>
         </div>
 
         <script>
-            var slider = docuement.getElementById("slider");
+            var slider = document.getElementById("slider");
             var selector = document.getElementById("selector");
             var SelectValue = document.getElementById("SelectValue");
             var ProgressBar = document.getElementById("ProgressBar");
 
             SelectValue.innerHTML = slider.value;
-            slider.oniput = function() {
+            slider.oninput = function() {
                 SelectValue.innerHTML = this.value;
                 selector.style.left = this.value + "%";
                 ProgressBar.style.width = this.value + "%";
